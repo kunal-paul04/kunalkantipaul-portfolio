@@ -1,6 +1,6 @@
 # Personal Portfolio
 
-This is a full-stack portfolio project built using **FastAPI** and **MongoDB** as the database. The portfolio is inspired by [Siddesh1210](https://github.com/Siddesh1210), with a unique background and theme to make it original.
+This is a full-stack portfolio project built using **FastAPI** and **MongoDB** as the database. The portfolio is inspired by [Adenekan Wonderful](https://www.codewonders.dev/), with a unique background and theme to make it original.
 
 ## Project Structure (FastAPI)
 
