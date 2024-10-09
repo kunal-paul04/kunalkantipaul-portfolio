@@ -61,6 +61,58 @@
             font-display:swap;
             font-style:normal
         }
+        /* Make sure the cursor is visible over the project items */
+        .gJKjnw:hover,
+        .gJKjnw:focus {
+            cursor: pointer !important; /* Ensure pointer is visible */
+        }
+        /* Smooth hover effect without distortion */
+        .gJKjnw:hover div.content__slate,
+        .gJKjnw:focus div.content__slate {
+            transform: translateY(0); /* Ensure no sudden jumps */
+            opacity: 1;
+            transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out; /* Smooth transition */
+        }
+
+        .gJKjnw div.content__slate {
+            transform: translateY(10%); /* Initial state before hover */
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+        /* Adjust project display on smaller screens */
+        @media (max-width: 768px) {
+            .dYFgLg {
+                column-count: 1 !important; /* Ensure single column layout on small screens */
+            }
+
+            .gJKjnw {
+                padding: 1.4rem 1rem;
+                margin: 0 0 1.5em; /* Consistent spacing between items */
+            }
+
+            .gJKjnw h3 {
+                font-size: 1.5em; /* Adjust font size for mobile */
+            }
+
+            .gJKjnw p {
+                font-size: 1em; /* Ensure readability on mobile */
+            }
+        }
+        /* Initial state before hover */
+        .gJKjnw div.content__slate {
+            opacity: 0; /* Start with hidden content */
+            transform: translateY(10%);
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+            z-index: 10;
+        }
+
+        /* When hovering or focusing on the project item */
+        .gJKjnw:hover div.content__slate,
+        .gJKjnw:focus div.content__slate {
+            opacity: 1; /* Make content visible */
+            transform: translateY(0); /* Ensure the content moves into place smoothly */
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
     </style>
     <link rel="stylesheet" href="../static/css/normalize.css"/>
     <link rel="stylesheet" href="../static/css/base.css"/>
@@ -89,6 +141,89 @@
         .gJKjnw{margin:0 0 1.5em;position:relative;cursor:pointer;border-radius:9px;object-fit:cover;background-color:var(--button-index);background-position:center;background-repeat:no-repeat;overflow:hidden;padding:1.4rem 2rem;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:flex-end;-webkit-box-align:flex-end;-ms-flex-align:flex-end;align-items:flex-end;border-radius:9px;-webkit-break-inside:avoid;break-inside:avoid;} @media (max-width:758px){.gJKjnw{padding:1.4rem 1rem;}} .gJKjnw img{width:100% !important;height:100% !important;position:absolute;left:0 !important;top:0 !important;object-fit:cover;} .gJKjnw:before{content:'';pointer-events:none;display:block;position:absolute;top:0px;right:0px;bottom:0px;left:0px;z-index:-1;background:radial-gradient( circle at center center,white 10%,whitesmoke 11%,whitesmoke 100% );} .gJKjnw:after{content:'';pointer-events:none;position:absolute;z-index:1;top:0px;right:0px;bottom:0px;left:0px;opacity:0.3;background:linear-gradient( 180deg,rgba(0,0,0,0.1) 10%,rgb(0 0 0 / 78%) 80% );} .gJKjnw:hover,.gJKjnw:focus{cursor:none;} .gJKjnw:hover:after,.gJKjnw:focus:after{opacity:1;} .gJKjnw:hover div.content__slate,.gJKjnw:focus div.content__slate{z-index:999;-webkit-transform:none;-ms-transform:none;transform:none;opacity:1;} .gJKjnw h3{color:#fff;font-size:var(--font-x-md);font-weight:800;} .gJKjnw p{color:#d5d5d5 !important;font-size:calc(var(--font-sm) + 0.9px);} .gJKjnw p span{background:#696869;padding:4px 10px;border-radius:50px;text-transform:capitalize;font-size:11px;margin-right:6px;color:#fff;font-weight:500;} .gJKjnw div.content__slate{opacity:0;-webkit-transform:translateY(10%);-ms-transform:translateY(10%);transform:translateY(10%);-webkit-transition:opacity 300ms ease-in-out 0s,-webkit-transform 300ms ease-in-out 0s;-webkit-transition:opacity 300ms ease-in-out 0s,transform 300ms ease-in-out 0s;transition:opacity 300ms ease-in-out 0s,transform 300ms ease-in-out 0s;} @media (max-width:585px){.gJKjnw:after{opacity:1 !important;}.gJKjnw div.content__slate{z-index:999 !important;-webkit-transform:none !important;-ms-transform:none !important;transform:none !important;opacity:1 !important;}} @media (max-width:989px){.gJKjnw:after{opacity:1 !important;}.gJKjnw div.content__slate{z-index:999 !important;-webkit-transform:none !important;-ms-transform:none !important;transform:none !important;opacity:1 !important;}} @media (max-width:220px){.gJKjnw:after{opacity:1 !important;}.gJKjnw div.content__slate{z-index:999 !important;-webkit-transform:none !important;-ms-transform:none !important;transform:none !important;opacity:1 !important;}}
         /* sc-component-id: projects__PageSection-sc-1lnyilc-0 */
         .jhxIzg .intro__text{font-size:var(--font-x-lg);font-weight:900;margin:4rem 0rem 1.5rem;position:relative;} .jhxIzg button{font-size:calc(var(--font-sm) + 1.5px);background:var(--mark);border:none;border-radius:5px;padding:0px 9px;}
+    </style>
+    <style>
+        /* Make sure the cursor is visible over the project items */
+        .gJKjnw:hover,
+        .gJKjnw:focus {
+            cursor: pointer !important; /* Ensure pointer is visible */
+        }
+        /* Smooth hover effect without distortion */
+        .gJKjnw:hover div.content__slate,
+        .gJKjnw:focus div.content__slate {
+            transform: translateY(0); /* Ensure no sudden jumps */
+            opacity: 1;
+            transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out; /* Smooth transition */
+        }
+        .gJKjnw div.content__slate {
+            transform: translateY(10%); /* Initial state before hover */
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+        /* Adjust project display on smaller screens */
+        @media (max-width: 768px) {
+            .dYFgLg {
+                column-count: 1 !important; /* Ensure single column layout on small screens */
+            }
+            .gJKjnw {
+                padding: 1.4rem 1rem;
+                margin: 0 0 1.5em; /* Consistent spacing between items */
+            }
+            .gJKjnw h3 {
+                font-size: 1.5em; /* Adjust font size for mobile */
+            }
+            .gJKjnw p {
+                font-size: 1em; /* Ensure readability on mobile */
+            }
+        }
+        /* Initial state before hover */
+        .gJKjnw div.content__slate {
+            opacity: 0; /* Start with hidden content */
+            transform: translateY(10%);
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+            z-index: 10;
+        }
+        /* When hovering or focusing on the project item */
+        .gJKjnw:hover div.content__slate,
+        .gJKjnw:focus div.content__slate {
+            opacity: 1; /* Make content visible */
+            transform: translateY(0); /* Ensure the content moves into place smoothly */
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+        /* Ensure consistent image overlay */
+        .gJKjnw:after {
+            content: '';
+            pointer-events: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            opacity: 0.5; /* Adjust the opacity to keep images slightly dimmed */
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 10%, rgba(0, 0, 0, 0.78) 80%);
+            transition: opacity 0.3s ease-in-out; /* Smooth transition for hover */
+        }
+        /* When hovering or focusing on the project item */
+        .gJKjnw:hover:after,
+        .gJKjnw:focus:after {
+            opacity: 0.6; /* Slightly increase the opacity on hover to make content more readable */
+            transition: opacity 0.3s ease-in-out;
+        }
+        /* Adjust the content to make sure it’s visible and readable */
+        .gJKjnw div.content__slate {
+            z-index: 10; /* Ensure the text stays on top of the image */
+            color: white; /* Ensure the text is always visible */
+            opacity: 0;
+            transform: translateY(10%);
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+        .gJKjnw:hover div.content__slate,
+        .gJKjnw:focus div.content__slate {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
     </style>
 </head>
 <body>
@@ -146,12 +281,6 @@
                         <div class="row align-items-center justify-content-center">
                             <div class="col-md-10">
                                 <h1 class="intro__text">Projects.</h1>
-                                <br/>
-                                <nav class="Tabs__Wrapper-sc-givu5n-0 FXjKQ d-md-flex d-block tabs" role="tablist">
-                                    <button class="tab-list-item tab-list-active" type="button" id="cardHover" aria-label="Open All" aria-current="All">All</button>
-                                    <button class="tab-list-item " type="button" id="cardHover" aria-label="Open Professional Projects" aria-current="All">Professional</button>
-                                    <button class="tab-list-item " type="button" id="cardHover" aria-label="Open Personal Projects" aria-current="All">Personal</button>
-                                </nav>
                                 <div class="tab-content">
                                     <div class="Mansory__Layout-sc-1da2mru-0 dYFgLg">
                                         {% for project in projects|reverse %}
@@ -218,23 +347,17 @@
     </div>
 </div>
 <script>
-    document.querySelectorAll('.tab-list-item').forEach(tab => {
-        tab.addEventListener('click', function () {
-            const selectedTab = this.textContent.trim().toLowerCase();
-            const projects = document.querySelectorAll('.mansory-item__MansoryItemStyle-sc-luo7c4-0');
+    document.addEventListener('DOMContentLoaded', function () {
+        const toggler = document.querySelector('.navbar-toggler');
+        const navbarCollapse = document.querySelector('#collapsibleNavbar');
 
-            projects.forEach(project => {
-                const tag = project.getAttribute('data-tag');
-                if (selectedTab === 'all' || tag === selectedTab) {
-                    project.style.display = 'block';  // Show matching projects
-                } else {
-                    project.style.display = 'none';  // Hide non-matching projects
-                }
-            });
+        toggler.addEventListener('click', function () {
+          navbarCollapse.classList.toggle('show');
+        });
 
-            // Update active tab styling
-            document.querySelector('.tab-list-active').classList.remove('tab-list-active');
-            this.classList.add('tab-list-active');
+        const closeBtn = document.querySelector('.close-nav');
+        closeBtn.addEventListener('click', function () {
+          navbarCollapse.classList.remove('show');
         });
     });
 </script>
